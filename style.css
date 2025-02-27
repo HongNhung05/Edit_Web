@@ -1,0 +1,162 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('img/background.jpg'); /* Thay đường dẫn hình ảnh tại đây */  
+    background-repeat: no-repeat; /* Ngăn lặp lại hình ảnh */
+    background-size: cover; /* Phủ toàn bộ màn hình */
+    background-position: center; /* Căn giữa hình ảnh */
+    background-attachment: fixed; /* Ảnh nền cố định khi cuộn trang */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    height: auto;
+    margin: 20px auto;
+}
+
+.card {
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33.33% - 20px); /* 3 card trên một hàng, trừ khoảng cách */
+    box-sizing: border-box;
+    background-color: rgba(251, 249, 255, 0.734);
+}
+
+.profile {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    background-color: rgba(251, 249, 255, 0.734);
+}
+
+.profile-left {
+    text-align: center;
+    width: 30%;
+    
+}
+
+.profile-right {
+    width: 70%;
+    font-size: 20px;
+}
+
+.avatar {
+    border-radius: 50%;
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+}
+
+.text-muted {
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 23px;
+}
+.text-muted a {
+    color: #000000; /* Màu xanh tím */
+    text-decoration: none; /* Bỏ gạch chân mặc định */
+    font-weight: bold;
+}
+
+.text-muted a:hover {
+    text-decoration: underline; /* Gạch chân khi di chuột */
+    color: #3b3bdb; /* Màu sáng hơn khi hover */
+}
+
+
+.email {
+    color: rgb(232, 38, 3);
+    margin-top: 15px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    margin: 0 5px;
+    color: #2236e8;
+}
+
+.row {
+    display: flex;
+    gap: 20px;
+    font-size: 18px;
+}
+
+/* Hiệu ứng phóng to khi di chuột vào class row */
+.card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
+    border: 2px solid transparent; /* Ban đầu không có viền màu */
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(25, 210, 102, 0.8); /* Viền phát sáng xanh tím */
+    border-color: #3e8de7; /* Viền đổi sang màu xanh tím */
+}
+
+.card ul {
+    padding-left: 20px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+li {
+    line-height: 1.5; /* Điều chỉnh khoảng cách dòng, giá trị 1.8 có thể thay đổi theo nhu cầu */
+    margin-bottom: 5px; /* Thêm khoảng cách giữa các mục */
+}
+
+.hop {
+    font-family: 'Dancing Script', cursive;
+    font-size: 20px;
+    /*transition: transform 0.2s ease-in-out, color 0.3s ease-in-out;
+    transform-origin: left; /* Đặt gốc phóng to từ bên trái */
+}
+/*
+.hop:hover {
+    transform: scale(1.1, 1); /* Chỉ phóng to theo chiều ngang */
+/*    color: #e74e2f;
+}*/
+
+.social-icons {
+    display: flex;
+    flex-direction: row; /* Hàng ngang (mặc định) */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    gap: 20px; /* 🌟 Tạo khoảng cách đều giữa các icon */
+}
+
+.social-icons a:hover {
+    transform: scale(1.2) rotate(5deg);
+    background-color: #4f46e5; /* Màu xanh tím */
+    color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 600px) {
+    .card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-left {
+        text-align: center;
+    }
+}
+@media (max-width: 800px) {
+    .card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-left {
+        text-align: center;
+    }
+}
